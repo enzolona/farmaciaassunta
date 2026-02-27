@@ -1,29 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiPhoneFill, RiMapPinFill, RiMailFill, RiTimeFill } from "react-icons/ri";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
   const contactInfo = [
     {
       icon: <RiPhoneFill size={24} />,
       title: "Telefono",
       content: "045 908 600",
+      type: "phone",
+      link: "tel:045908600",
     },
     {
       icon: <RiMapPinFill size={24} />,
       title: "Indirizzo",
       content: "Via Roma, 43, Grezzana (VR)",
+      type: "address",
     },
     {
       icon: <RiMailFill size={24} />,
       title: "Email",
       content: "farmaciadellassunta@gmail.com",
+      type: "email",
     },
     {
       icon: <RiTimeFill size={24} />,
       title: "Orari",
       content: "Lun-Ven: 9:00-18:00, Sab: 9:00-13:00",
+      type: "hours",
     },
   ];
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText("farmaciadellassunta@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Errore nella copia:", err);
+    }
+  };
 
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white">
@@ -47,11 +64,27 @@ const Contact = () => {
                 <div className="flex-shrink-0 p-3 md:p-4 bg-primary/5 text-primary">
                   {info.icon}
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="text-base md:text-lg font-semibold text-accent mb-1 md:mb-2">
                     {info.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-600">{info.content}</p>
+                  {info.type === "phone" ? (
+                    <a 
+                      href={info.link}
+                      className="text-sm md:text-base text-primary hover:text-secondary transition-colors font-medium cursor-pointer"
+                    >
+                      {info.content}
+                    </a>
+                  ) : info.type === "email" ? (
+                    <button
+                      onClick={handleEmailClick}
+                      className="text-sm md:text-base text-primary hover:text-secondary transition-colors font-medium cursor-pointer text-left"
+                    >
+                      {copied ? "✓ Email copiata!" : info.content}
+                    </button>
+                  ) : (
+                    <p className="text-sm md:text-base text-gray-600">{info.content}</p>
+                  )}
                 </div>
               </div>
             ))}
