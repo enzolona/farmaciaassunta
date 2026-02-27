@@ -31,7 +31,7 @@ const TurnoAlert = () => {
   if (!isCurrentlyOnShift) return null;
 
   return (
-    <div className="fixed top-20 left-0 right-0 z-40 bg-green-600 text-white shadow-lg">
+    <div className="fixed top-20 left-0 right-0 z-40 bg-success text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-3 md:py-4">
         <div className="flex items-center justify-center text-center">
           <div>
