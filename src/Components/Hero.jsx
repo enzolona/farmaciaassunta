@@ -1,4 +1,5 @@
 import React from "react";
+import heroImg from "../assets/img/immagiefarmacia.jpg";
 
 const Hero = () => {
   return (
@@ -34,7 +35,7 @@ const Hero = () => {
         <div className="relative order-first lg:order-last" data-aos="fade-left">
           <div className="relative z-10">
             <img
-              src="/src/assets/img/immagiefarmacia.jpg"
+              src={heroImg}
               alt="Farmacia"
               className="w-full h-auto object-cover"
             />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { RiPhoneFill } from "react-icons/ri";
+import logoImg from "../assets/img/farmaciadellassunta.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,7 +42,7 @@ const Navbar = () => {
             className="flex items-center gap-3 cursor-pointer"
           >
             <img
-              src="/src/assets/img/farmaciadellassunta.png"
+              src={logoImg}
               alt="Logo"
               className="h-10 w-10 md:h-12 md:w-12"
             />

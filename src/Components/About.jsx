@@ -1,4 +1,5 @@
 import React from "react";
+import logoImg from "../assets/img/farmaciadellassunta.png";
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
           <div className="relative order-2 lg:order-1" data-aos="fade-right">
             <div className="relative z-10 bg-white p-8">
               <img
-                src="/src/assets/img/farmaciadellassunta.png"
+                src={logoImg}
                 alt="Farmacia dell'Assunta"
                 className="w-full h-auto"
               />

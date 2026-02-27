@@ -1,6 +1,7 @@
 import React from "react";
 import { RiFacebookFill, RiInstagramFill, RiTwitterFill } from "react-icons/ri";
 import { Link } from "react-scroll";
+import logoImg from "../assets/img/farmaciadellassunta.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +15,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <img
-                src="/src/assets/img/farmaciadellassunta.png"
+                src={logoImg}
                 alt="Logo"
                 className="h-12 w-12 bg-white p-1 rounded"
               />
