@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RiPhoneFill, RiMapPinFill, RiMailFill, RiTimeFill } from "react-icons/ri";
+import { RiPhoneFill, RiMapPinFill, RiMailFill } from "react-icons/ri";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -17,18 +17,13 @@ const Contact = () => {
       title: "Indirizzo",
       content: "Via Roma, 43, Grezzana (VR)",
       type: "address",
+      link: "https://maps.google.com/?q=Farmacia+dell'Assunta,Via+Roma+43,37023+Grezzana+VR",
     },
     {
       icon: <RiMailFill size={24} />,
       title: "Email",
       content: "farmaciadellassunta@gmail.com",
       type: "email",
-    },
-    {
-      icon: <RiTimeFill size={24} />,
-      title: "Orari",
-      content: "Lun-Ven: 9:00-18:00, Sab: 9:00-13:00",
-      type: "hours",
     },
   ];
 
@@ -82,49 +77,21 @@ const Contact = () => {
                     >
                       {copied ? "✓ Email copiata!" : info.content}
                     </button>
+                  ) : info.type === "address" ? (
+                    <a
+                      href={info.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm md:text-base text-primary hover:text-secondary transition-colors font-medium cursor-pointer"
+                    >
+                      {info.content}
+                    </a>
                   ) : (
                     <p className="text-sm md:text-base text-gray-600">{info.content}</p>
                   )}
                 </div>
               </div>
             ))}
-
-            {/* Opening Hours Table */}
-            <div className="bg-light p-4 md:p-6 border-l-4 border-primary" data-aos="fade-up">
-              <h3 className="text-lg md:text-xl font-semibold text-accent mb-3 md:mb-4">Orari di Apertura</h3>
-              <table className="table-auto w-full text-sm md:text-base">
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Lunedì</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Martedì</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Mercoledì</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Giovedì</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Venerdì</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 md:py-3 text-primary font-medium">Sabato</td>
-                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 13:00</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 md:py-3 text-red-500 font-medium">Domenica</td>
-                    <td className="py-2 md:py-3 text-right text-red-500">Chiuso</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
 
           {/* Google Maps */}
