@@ -92,6 +92,43 @@ const Contact = () => {
                 </div>
               </div>
             ))}
+
+            {/* Opening Hours Table */}
+            <div className="bg-light p-4 md:p-6 border-l-4 border-primary" data-aos="fade-up">
+              <h3 className="text-lg md:text-xl font-semibold text-accent mb-3 md:mb-4">Orari di Apertura</h3>
+              <table className="table-auto w-full text-sm md:text-base">
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Lunedì</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Martedì</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Mercoledì</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Giovedì</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Venerdì</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 18:00</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 md:py-3 text-primary font-medium">Sabato</td>
+                    <td className="py-2 md:py-3 text-right text-gray-600">09:00 - 13:00</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 md:py-3 text-red-500 font-medium">Domenica</td>
+                    <td className="py-2 md:py-3 text-right text-red-500">Chiuso</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Google Maps */}
