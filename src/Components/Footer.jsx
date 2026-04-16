@@ -101,6 +101,26 @@ const Footer = () => {
                   Contatti
                 </Link>
               </li>
+              <li>
+                <a
+                  href="/privacy-policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/cookie-policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Cookie Policy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -122,6 +142,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 md:py-6">
           <p className="text-center text-gray-400 text-sm">
             © {currentYear} Farmacia dell'Assunta. Tutti i diritti riservati.
+          </p>
+          <p className="text-center text-gray-400 text-xs mt-2">
+            FARMACIA DELL'ASSUNTA S.N.C. DI LONARDONI GUIDO E MICHELE | P. IVA / C.F. 02615740236
           </p>
         </div>
       </div>

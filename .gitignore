@@ -27,3 +27,6 @@ dist-ssr
 .env
 .env.local
 .env.production
+
+# Local backup of removed assets
+src/assets/img/_unused_backup_2026-04-16/

@@ -48,7 +48,6 @@ const Turns = () => {
           <div className="max-w-2xl mx-auto">
             <div className="bg-gradient-to-br from-primary to-secondary text-white rounded-lg shadow-xl p-8 md:p-10">
               <div className="text-center mb-6">
-                <p className="text-sm font-semibold uppercase tracking-widest opacity-90">Prossima Apertura</p>
                 <h3 className="text-4xl md:text-5xl font-bold mt-3">{nextShift.start}</h3>
                 <p className="text-lg opacity-90 mt-2">fino a {nextShift.end}</p>
               </div>
@@ -68,7 +67,7 @@ const Turns = () => {
 
               <div className="text-center">
                 <p className="opacity-90 text-sm">
-                  ⏰ Apertura 24 ore su 24 per servire la comunità
+                    Apertura 24 ore su 24
                 </p>
               </div>
             </div>
